@@ -6,8 +6,8 @@ wait_time_int = int(wait_time_str)
 
 final_time_int = current_time_int + wait_time_int
 
-number_of_days = final_time_int/ 24 #regular division
-waiting_days = final_time_int // 24 #integer or whole number division
-final_answer = final_time_int % 24 #the remainder from the integer division
+number_of_days = final_time_int / 24  # regular division
+waiting_days = final_time_int // 24  # integer or whole number division
+final_answer = final_time_int % 24  # the remainder from the integer division
 
 print("The time after waiting is:", final_answer)
