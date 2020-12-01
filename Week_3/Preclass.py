@@ -1,7 +1,7 @@
 import turtle
 window = turtle.Screen()
 
-color=input("Would you like a lightgreen or red background?")
+color = input("Would you like a lightgreen or red background?")
 window.bgcolor(color)
 
 window.title("Hello!")

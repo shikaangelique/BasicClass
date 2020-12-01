@@ -8,7 +8,7 @@ leonardo.pensize(10)
 colors = ["red", "orange", "yellow", "green", "blue", "purple"]
 
 for index in range(12):
-    leonardo.color(colors[index % 5]) # instead of %5 use %len(colors)
+    leonardo.color(colors[index % 5])  # instead of %5 use %len(colors)
     if index % 2 == 0:
         leonardo.forward(100)
     else:
