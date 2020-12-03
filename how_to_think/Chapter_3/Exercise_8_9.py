@@ -8,8 +8,8 @@ hypotenuse = (float(input("enter length of side 3 in cm:")))**2
 threshold = 1**(-7)
 
 if abs((opposite+adjacent)-hypotenuse) < threshold or abs((hypotenuse+adjacent)-opposite) < threshold or abs((opposite+hypotenuse)-adjacent) < threshold:
-    print(True)
+    print(True, "it is right-angled")
 
 else:
-    print(False)
+    print(False, "it is not right-angled")
 
