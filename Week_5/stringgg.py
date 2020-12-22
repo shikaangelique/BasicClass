@@ -9,4 +9,3 @@ for i in range(11):
     print(string_format.format(i, i ** .5, i ** 2, i ** 3))
 
 
-

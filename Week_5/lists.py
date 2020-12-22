@@ -7,5 +7,3 @@ print(", ".join(week_days[1:4]))
 for day in week_days:
     print(day, "*", sep="", end="")  # default end is \n
 
-for day in week_days:
-    print()
