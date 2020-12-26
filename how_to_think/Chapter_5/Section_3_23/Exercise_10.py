@@ -2,7 +2,7 @@
 def replace(word, old, new):
     word_list = word.split()
     for words in word_list:
-        new_word= word.replace(old, new)
+        new_word = word.replace(old, new)
     return new_word
 
 

@@ -10,6 +10,11 @@ print(fruit_bowl)
 print(fruit_bowl["banana"])
 print(fruit_bowl.get("orange", 0))
 
+letter_counts = {}
+for letter in "Shika Akpaloo":
+    letter_counts[letter] = letter_counts.get(letter, 0)+1
+print(list(letter_counts.items()))
+
 user_input = input("What kind of fruit will you add?")
 fruit_bowl[user_input] = fruit_bowl.get(user_input, 0)+1  #  +=for things only in dictionary
 
@@ -23,7 +28,7 @@ print(fruit_bowl)
 for fruit, quantity in fruit_bowl.items():
     print(fruit, quantity)
 
-# in test keys (not values)
+# in tests keys (not values)
 if "pineapple" in fruit_bowl:
     print("exotic!")
 else:
