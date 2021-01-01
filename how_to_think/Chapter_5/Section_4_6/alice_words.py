@@ -30,6 +30,7 @@ print("=" * (len(longest_word) + 5))
 for word, quantity in word_bank.items():
     print(table_format.format(word, quantity))
 
+# as a separate output file 
 with open("alice_words.txt", "w") as alice_output:
     string_format = "{:<" + str(len(longest_word)) + "} {:>5}\n"
 
