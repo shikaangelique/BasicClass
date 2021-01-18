@@ -1,0 +1,4 @@
+Bike 5
+Bus 4
+Train 6
+Car 8
