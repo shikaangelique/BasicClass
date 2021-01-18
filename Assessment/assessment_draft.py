@@ -31,7 +31,7 @@ with open(file_name) as nutritional_value_file:
 for ingredient in ingredient_list:
     if ingredient not in nutritional_value_dict:
         print("Please provide the following information:")
-        unit = input("What is the unit for " + ingredient)
+        unit = input("What is the unit for " + ingredient + "? ")
         kcal = input("How many kilo calories does " + ingredient + " contain? ")
         fat = input("How many grams of fat does " + ingredient + " contain? ")
         carbohydrate = input("How many grams of carbohydrate does " + ingredient + " contain? ")
@@ -74,14 +74,14 @@ longest_ingredient = max([len(ingredient) for ingredient in ingredient_list])
 while longest_ingredient < len("ingredient"):
     longest_ingredient = len("ingredient")
 
-table_format = "{:<" + str(longest_ingredient + 2) + "} {:>7} {:>7} {:>7} {:>7} {:>11} {:>7}\n"
+table_format = "{:<" + str(longest_ingredient + 2) + "} {:>9} {:>9} {:>9} {:>9} {:>11} {:>9}\n"
 
 with open("output.txt", "w") as output_file:
-    output_file.write(table_format.format("ingredient", "amount", "unit(g)", "kcal", "fat", "carbohydrate", "protein"))
+    output_file.write("Overview of Nutritional Information for Recipe:\n")
+    output_file.write(table_format.format("ingredient", "amount", "unit(g)", "kcal", "fat(g)", "carbohydrate(g)", "protein(g)"))
     for ingredient in ingredient_list:
         output_file.write(table_format.format(ingredient, user_amounts[ingredient], *nutritional_value_dict[ingredient]))
     output_file.write(table_format.format("total", "", "", round(total_calories, 2), round(total_fat, 2), round(total_carbs, 2), round(total_protein, 2)))
 
-# for ingredient in ingredient_list:
-#     print(table_format.format(ingredient, user_amounts[ingredient], *nutritional_value_dict[ingredient]))
-# print(table_format.format("total", "", "", round(total_calories, 2), round(total_fat, 2), round(total_carbs, 2), round(total_protein, 2)))
+with open("output.txt", "r") as output_file:
+    print(output_file.read())
